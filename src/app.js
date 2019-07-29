@@ -1,14 +1,66 @@
-let count = 0;
-const template = (
+console.log("App is running!");
+
+// JSX - Javascript XML
+// var template = React.createElement("h2", { id: "5"  }, " REACT bobs ");
+
+/* Data */
+const app = {
+  title: "Indecesion App",
+  subtitle: "Put your life in your hands",
+  options: ["Do this ", "Do that"]
+};
+
+// const user = {
+//   name: "Alex Kentros",
+//   location: "San Franchisco",
+//   age: "24"
+// };
+
+/* Templates */
+const appTemplate = (
   <div>
-    <h1> Count : {count}</h1>
-    <button id="my-id" className="button">
-      +1
-    </button>
+    <p> {app.title.toUpperCase()} </p>
+    {app.subtitle && <p> {app.subtitle} </p>}
+    {renderOptions(app.options)}
   </div>
 );
-console.log(template)
 
-const appRoot = document.getElementById("app");
+// const userTemplate = (
+//   <div>
+//     <h1>Name: {user.name ? user.name : " Unknown "} </h1>
+//     {getLocation(user.location)}
+//     <p>Age: {user.age}</p>
+//   </div>
+// );
 
-ReactDOM.render(template, appRoot);
+/* Methods */
+function renderOptions(options) {
+  return (
+    <div>
+      <ol>
+        {options.map((value, index) => (
+          <li key={value}>{value}</li>
+        ))}
+      </ol>
+
+      <form>
+        <input type="text" name="option" />
+        <button> Add Option </button>
+      </form>
+      
+    </div>
+  );
+}
+
+// function getLocation(location) {
+//   if (location) {
+//     return <p> Location : {location} </p>;
+//   }
+// }
+
+/* ReactDOM render */
+var appRoot = document.getElementById("app");
+// var appRoot2 = document.getElementById("app2");
+
+ReactDOM.render(appTemplate, appRoot);
+// ReactDOM.render(userTemplate, appRoot2);

@@ -1,9 +1,9 @@
 var nameVar = " Andrew";
-var nameVar = "Mike";
+var nameVar = "Mike"; //re-define
 console.log("nameVar", nameVar);
 
 let nameLet = " Jen";
-nameLet = "Julie";
+nameLet = "Julie"; //re-assign
 console.log(nameLet);
 
 const nameConst = "Frank";
