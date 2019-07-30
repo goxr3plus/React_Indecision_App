@@ -20,6 +20,11 @@ env,react --watch
 
 
 
+-- Visual Studio Code Shortcuts Templates --
+rcc
+rconst
+
+
 
 
 
