@@ -14,6 +14,34 @@ class IndecisionApp extends React.Component {
     this.removeOption = this.removeOption.bind(this);
   }
 
+  componentDidMount() {
+    console.log("Component Did Mount");
+
+    try {
+      console.log("Fetching data...");
+      const options = JSON.parse(localStorage.getItem("options"));
+      if (options) this.setState(() => ({ options: options }));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Component Did Update P.1 ", prevProps, prevState);
+    console.log("Component Did Update P.2", this.props, this.state);
+
+    //we have acess to [this.props + this.state]
+    if (prevState.options.length != this.state.options.length) {
+      console.log("Saving Data...");
+      const options = JSON.stringify(this.state.options);
+      localStorage.setItem("options", options);
+    }
+  }
+
+  componentWillUnmount() {
+    console.log("Component Will Un-Mount");
+  }
+
   removeAll() {
     this.setState(() => ({ options: [] }));
   }
@@ -34,7 +62,7 @@ class IndecisionApp extends React.Component {
     console.log(option);
 
     this.setState(prevState => ({
-      options: prevState.options.filter(item => item != option)
+      options: prevState.options.filter(item => item !== option)
     }));
   }
   8;
@@ -95,6 +123,7 @@ const Action = props => {
 const Options = props => {
   return (
     <div>
+    {!props.options.length && <p> Please add some new options </p> }
       <ol>
         {props.options.map((element, index) => (
           <Option
@@ -141,7 +170,7 @@ class AddOption extends React.Component {
     const error = this.props.addOption(inputValue);
     this.setState(() => ({ error }));
 
-    e.target.elements.input.value = "";
+    if (!error) e.target.elements.input.value = "";
   }
 
   render() {

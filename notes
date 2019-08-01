@@ -21,6 +21,9 @@ npm install babel-preset-react@6.24.1 babel-preset-env@1.5.2
 > babel  src/playground/y.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 
+-- Trigger ComponentWillUnmout manually
+ ReactDOM.render(React.createElement("p"),document.getElementById("app"))
+
 -- Visual Studio Code Shortcuts Templates --
 rcc
 rconst
