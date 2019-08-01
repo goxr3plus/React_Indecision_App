@@ -5,18 +5,17 @@ class IndecisionApp extends React.Component {
     this.state = {
       title: "Indecision App",
       subtitle: "Put your life in the hands of a computer!",
-      options: ["Option Alex", "Option Maria", "Option Spiros", "Option Melina"]
+      options: props.options
     };
 
     this.removeAll = this.removeAll.bind(this);
     this.addOption = this.addOption.bind(this);
     this.handlePick = this.handlePick.bind(this);
+    this.removeOption = this.removeOption.bind(this);
   }
 
   removeAll() {
-    this.setState(() => {
-      return { options: [] };
-    });
+    this.setState(() => ({ options: [] }));
   }
 
   addOption(newOption) {
@@ -26,10 +25,19 @@ class IndecisionApp extends React.Component {
       return "Item already exists";
     }
 
-    this.setState(prevState => {
-      return { options: [...prevState.options, newOption] };
-    });
+    this.setState(prevState => ({
+      options: [...prevState.options, newOption]
+    }));
   }
+
+  removeOption(option) {
+    console.log(option);
+
+    this.setState(prevState => ({
+      options: prevState.options.filter(item => item != option)
+    }));
+  }
+  8;
 
   handlePick() {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
@@ -41,25 +49,37 @@ class IndecisionApp extends React.Component {
   render() {
     return (
       <div>
-        <Header title={this.state.title} subtitle={this.state.subtitle} />
+        <Header />
         <Action
           hasOptions={this.state.options.length !== 0}
           handlePick={this.handlePick}
         />
-        <Options options={this.state.options} removeAll={this.removeAll} />
+        <Options
+          options={this.state.options}
+          removeAll={this.removeAll}
+          removeOption={this.removeOption}
+        />
         <AddOption addOption={this.addOption} />
       </div>
     );
   }
 }
 
+IndecisionApp.defaultProps = {
+  options: ["Option Alex", "Option Maria", "Option Spiros", "Option Melinaa"]
+};
+
 const Header = props => {
   return (
     <div>
       <h1> {props.title} </h1>
-      <h2>{props.subtitle}</h2>
+      {props.subtitle && <h2>{props.subtitle}</h2>}
     </div>
   );
+};
+
+Header.defaultProps = {
+  title: "Indecision"
 };
 
 const Action = props => {
@@ -77,7 +97,11 @@ const Options = props => {
     <div>
       <ol>
         {props.options.map((element, index) => (
-          <Option key={index} data={element} />
+          <Option
+            key={index}
+            data={element}
+            removeOption={props.removeOption}
+          />
         ))}
       </ol>
       <button onClick={props.removeAll}> Remove All</button>
@@ -86,7 +110,15 @@ const Options = props => {
 };
 
 const Option = props => {
-  return <li style={{ fontWeight: "bold" }}> {props.data} </li>;
+  return (
+    <div>
+      <li style={{ fontWeight: "bold" }}>
+        {props.data}
+        <button onClick={e => props.removeOption(props.data)}>Remove</button>
+      </li>
+      <br />
+    </div>
+  );
 };
 
 class AddOption extends React.Component {
@@ -107,9 +139,7 @@ class AddOption extends React.Component {
 
     //empty string is falsy value
     const error = this.props.addOption(inputValue);
-    this.setState(() => {
-      return { error };
-    });
+    this.setState(() => ({ error }));
 
     e.target.elements.input.value = "";
   }
@@ -130,4 +160,7 @@ class AddOption extends React.Component {
   }
 }
 
-ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
+ReactDOM.render(
+  <IndecisionApp options={["Devils den", "Second Disctrict"]} />,
+  document.getElementById("app")
+);

@@ -14,8 +14,11 @@ npm install babel-preset-react@6.24.1 babel-preset-env@1.5.2
 -- Babel build app.js on the specific output folder and every time a change happens rebuild --
 >babel  src/app.js --out-file=public/scripts/app.js --presets=env,react --watch   
 
+-- For apps folder
+> babel  src/apps/x.js --out-file=public/scripts/app.js --presets=env,react --watch
+
 -- For playground folder
-> babel  src/playground/es6-arrow-function.js --out-file=public/scripts/app.js --presets=env,react --watch
+> babel  src/playground/y.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 
 -- Visual Studio Code Shortcuts Templates --
