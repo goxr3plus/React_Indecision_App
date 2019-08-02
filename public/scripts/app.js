@@ -34,7 +34,7 @@ var IndecisionApp = function (_React$Component) {
   _createClass(IndecisionApp, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log("Component Did Mount");
+      console.log("Component Did Mount ");
 
       try {
         console.log("Fetching data...");

@@ -8,13 +8,9 @@ npm install -g live-server
 
 ----------------------------------------------- BABEL  INSTALL --------------------------------------------------------------------
 
--- Install Babel  Globally --
-npm i -g  babel-cli@6.24.1 
-
--- Install Babel react preset and env ba---
-npm i babel-preset-react@6.24.1 babel-preset-env@1.5.2 
-
-
+-- Install Babel stuff---
+npm i  babel-preset-env@1.5.2  babel-cli@6.24.1  babel-preset-react@6.24.1
+ 
 ----------------------------------------------- BABEL  RUN --------------------------------------------------------------------
 
 -- Babel build app.js on the specific output folder and every time a change happens rebuild --

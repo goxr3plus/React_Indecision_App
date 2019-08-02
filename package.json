@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-     "serve":"live-server public/",
-     "build":"babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "serve": "live-server public/",
+    "build": "webpack --watch",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "author": "Kentros Alexandros <Alexandros.KENTROS@intrasoft-intl.com>",
   "license": "ISC",
@@ -13,6 +14,10 @@
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "webpack": "^4.39.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.6"
   }
 }
