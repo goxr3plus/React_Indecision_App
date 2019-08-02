@@ -1,15 +1,21 @@
 
+----------------------------------------------- LIVE SERVER INSTALL + RUN --------------------------------------------------------------------
 -- Install Live Server Globally --
 npm install -g live-server
 
 --- How to run Live Server on a specific folder (public) ---
 >live-server public
 
--- Install Babel --
+----------------------------------------------- BABEL  INSTALL --------------------------------------------------------------------
+
+-- Install Babel  Globally --
 npm i -g  babel-cli@6.24.1 
 
--- Install Babel react preset and env ---
-npm install babel-preset-react@6.24.1 babel-preset-env@1.5.2 
+-- Install Babel react preset and env ba---
+npm i babel-preset-react@6.24.1 babel-preset-env@1.5.2 
+
+
+----------------------------------------------- BABEL  RUN --------------------------------------------------------------------
 
 -- Babel build app.js on the specific output folder and every time a change happens rebuild --
 >babel  src/app.js --out-file=public/scripts/app.js --presets=env,react --watch   
@@ -21,12 +27,17 @@ npm install babel-preset-react@6.24.1 babel-preset-env@1.5.2
 > babel  src/playground/y.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 
+----------------------------------------------- ETC --------------------------------------------------------------------
+
 -- Trigger ComponentWillUnmout manually
  ReactDOM.render(React.createElement("p"),document.getElementById("app"))
 
 -- Visual Studio Code Shortcuts Templates --
 rcc
 rconst
+
+--Something from Java ignore
+-Djxbrowser.logging.level=ALL
 
 
 
