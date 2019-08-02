@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --watch",
-    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "dev":"concurrently --kill-others \"npm run build\" \"npm run serve\""
   },
   "author": "Kentros Alexandros <Alexandros.KENTROS@intrasoft-intl.com>",
   "license": "ISC",
