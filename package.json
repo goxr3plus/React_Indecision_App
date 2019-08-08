@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --watch",
-    "build-babel-obsolete": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "babel-build": "babel src/app.js --out-file=public/scripts/app.js --presets=@babel/env,@babel/react --watch",
     "start": "npm-run-all -p serve build"
   },
   "author": "Kentros Alexandros <Alexandros.KENTROS@intrasoft-intl.com>",
