@@ -7,7 +7,7 @@ module.exports = {
     path: path.join(__dirname, "public"),
     filename: "bundle.js"
   },
-  //loader -> let's you customize the behaviour of webpack when it loads a specific file
+  //Customize the behaviour of webpack when it loads a specific file
   module: {
     rules: [
       {
@@ -17,5 +17,10 @@ module.exports = {
       }
     ]
   },
-  devtool: "cheap-module-eval-source-map"
+  // show original source code so we don't get lost inside bundle.js when errors happen
+  devtool: "cheap-module-eval-source-map",
+  // use dev server
+  devServer: {
+    contentBase: path.join(__dirname, "public")
+  }
 };
