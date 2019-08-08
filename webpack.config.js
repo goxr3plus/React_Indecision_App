@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: "./src/app.js",
   output: {
     path: path.join(__dirname, "public"),
@@ -16,5 +16,6 @@ module.exports = {
         use: ["babel-loader"]
       }
     ]
-  }
+  },
+  devtool: "cheap-module-eval-source-map"
 };
