@@ -21,6 +21,8 @@ module.exports = {
   devtool: "cheap-module-eval-source-map",
   // use dev server
   devServer: {
-    contentBase: path.join(__dirname, "public")
+    contentBase: path.join(__dirname, "public"),
+    compress: false,
+    port: 9000
   }
 };

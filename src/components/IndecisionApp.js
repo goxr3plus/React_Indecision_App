@@ -5,6 +5,8 @@ import AddOption from "./AddOption";
 import Action from "./Action";
 
 export default class IndecisionApp extends Component {
+  instanceProperty = "Borky Gorky!";
+
   constructor(props) {
     super(props);
 
@@ -17,11 +19,11 @@ export default class IndecisionApp extends Component {
     this.removeAll = this.removeAll.bind(this);
     this.addOption = this.addOption.bind(this);
     this.handlePick = this.handlePick.bind(this);
-    this.removeOption = this.removeOption.bind(this); 
+    this.removeOption = this.removeOption.bind(this);
   }
 
   componentDidMount() {
-    console.log("Component Did Mount ");
+    console.log("Component Did Mount ", this.instanceProperty);
 
     try {
       console.log("Fetching data...");
@@ -53,7 +55,7 @@ export default class IndecisionApp extends Component {
   }
 
   addOption(newOption) {
-    console.log(ewewr)
+    console.log(ewewr);
     if (!newOption) {
       return "Enter a valid value to add item";
     } else if (this.state.options.indexOf(newOption) > -1) {

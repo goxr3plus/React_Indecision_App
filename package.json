@@ -3,22 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "---------Generic-------": "---------------------",
     "run-p": "npm-run-all -p ",
     "babel-build": "babel src/app.js --out-file=public/scripts/app.js --presets=@babel/env,@babel/react --watch",
-    "----------------------": "----------------------",
+    "----------Live Server--------": "----------------------",
     "build": "webpack --watch",
     "serve": "live-server public/",
     "start-with-live-server": "run-p serve build",
-    "---------------------": "---------------------",
+    "----------Pure WebPack-----": "---------------------",
     "web-build": "webpack",
     "dev-server": "webpack-dev-server",
-    "start": "run-p web-build dev-server"
+    "start": "run-p dev-server web-build",
+    "------------------------": "---------------------"
   },
   "author": "Kentros Alexandros <Alexandros.KENTROS@intrasoft-intl.com>",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
