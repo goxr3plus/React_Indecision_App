@@ -7,7 +7,7 @@ class Counter extends React.Component {
 
     this.addOne = this.addOne.bind(this);
     this.minusOne = this.minusOne.bind(this);
-    this.reset = this.reset.bind(this);
+    this.reset = this.reset.bind(this)
   }
 
   componentDidMount() {

@@ -5,8 +5,8 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --watch",
-    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "dev":"npm-run-all -p serve build"
+    "build-babel-obsolete": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "start": "npm-run-all -p serve build"
   },
   "author": "Kentros Alexandros <Alexandros.KENTROS@intrasoft-intl.com>",
   "license": "ISC",
@@ -16,10 +16,12 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "live-server": "^1.2.1",
-    "webpack": "^4.39.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "validator": "^11.1.0",
+    "webpack": "^4.39.1"
   },
   "devDependencies": {
-    "concurrently": "^4.1.1",
     "npm-run-all": "^4.1.5",
     "webpack-cli": "^3.3.6"
   }
