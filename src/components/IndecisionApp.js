@@ -16,7 +16,6 @@ export default class IndecisionApp extends Component {
   };
 
   /* Event Handlers */
-
   clearLocalStorage = () => {
     localStorage.removeItem("options");
     this.setState(() => ({ options: this.props.options }));
