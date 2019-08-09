@@ -93,7 +93,7 @@ export default class IndecisionApp extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header subtitle={this.state.subtitle} />
         <button onClick={this.clearLocalStorage}>Clear LocalStorage</button>
         <hr />
         <Action

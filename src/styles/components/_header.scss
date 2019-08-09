@@ -1,0 +1,19 @@
+.header {
+  background: #20222b;
+  margin-bottom: 4.8rem;
+  padding: 1.6rem 0;
+  color: white;
+}
+
+//BEM - BLOCK ELEMENT MODIFIER
+.header__title {
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: #a5afd7;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+}
