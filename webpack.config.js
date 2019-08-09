@@ -30,6 +30,7 @@ module.exports = {
   // use dev server
   devServer: {
     contentBase: path.join(__dirname, "public"),
+    watchContentBase: true,
     compress: false,
     port: 9000
   }
