@@ -4,7 +4,7 @@ const Option = props => (
   <div>
     <li style={{ fontWeight: "bold" }}>
       {props.data}
-      <button onClick={e => props.removeOption(props.data)}>Remove</button>
+      <button className="button button--link" onClick={e => props.removeOption(props.data)}>Remove</button>
     </li>
     <br />
   </div>

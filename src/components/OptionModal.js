@@ -7,11 +7,13 @@ const OptionModal = props => (
     contentLabel="Example Modal"
     ariaHideApp={false}
     onRequestClose={props.close}
+    className="header container"
   >
-    <div>
+    <div >
       <h1> Selected Option</h1>
       {props.children}
-      <button onClick={props.close}>Okay</button>
+      <p></p>
+      <button className="button" onClick={props.close}>Okay</button>
     </div>
   </Modal>
 );

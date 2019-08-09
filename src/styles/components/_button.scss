@@ -10,11 +10,16 @@
   widows: 100%;
 }
 
+.big-button:hover{
+  background: darken($purple, 5%);
+  border-bottom: 0.6rem solid darken($purple, 15%);
+}
+
 .big-button:disabled {
   opacity: 0.5;
 }
 
-.small-button {
+.button {
   background: $purple;
   border: none;
   border-bottom: 0.3rem solid darken($purple, 10%);
@@ -24,3 +29,23 @@
   padding: $s-size;
   widows: 100%;
 }
+
+.button:hover{
+  background: darken($purple, 5%);
+  border-bottom: 0.3rem solid darken($purple, 15%);
+}
+
+
+.button--link {
+  background: none;
+  border: none;
+  color: $off-white;
+  padding: 0;
+}
+
+.button--link:hover {
+  background: none;
+  border-bottom: none;
+}
+
+
