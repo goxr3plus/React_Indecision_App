@@ -1,5 +1,7 @@
-# React Indecision App
+# React Indecision App ( Under Development)
 What you will do next ? Let the computer decide !
+
+# How it will look like 
 
 | Todo | Ride your mom 
 |:-:|:-:|
