@@ -22,9 +22,7 @@ What you will do next ? Let the computer decide !
 # How to run
 In the package.json i have 3 scripts. You can just use :
 > npm start
-
-It will actually start webpack-dev-server on the port 9000(which you can configure through `wepack.config.js) :
-
-http://127.0.0.1:9000/
+It will actually start webpack-dev-server on the port 9000(which you can configure through `wepack.config.js`) :
+> http://127.0.0.1:9000/
 
 
