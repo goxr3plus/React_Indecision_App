@@ -16,7 +16,7 @@ module.exports = {
         loader: "babel-loader" //loader allows as to give only one entry
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [  //use allows as to give an array of entries
           "style-loader", // creates style nodes from JS strings
           "css-loader", // translates CSS into CommonJS
