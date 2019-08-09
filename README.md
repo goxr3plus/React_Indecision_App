@@ -17,9 +17,7 @@ What you will do next ? Let the computer decide !
 
 > Webpack      (4.39.1)    [Link](https://github.com/webpack/webpack)
 
-> React Modal  (6.0.0)     [Link](https://github.com/sass/sass)
-
-> SCSS         
+> SCSS  (6.0.0)     [Link](https://github.com/sass/sass)
 
 # How to run
 In the package.json i have 3 scripts. You can just use :
