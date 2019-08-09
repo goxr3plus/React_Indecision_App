@@ -11,13 +11,13 @@ What you will do next ? Let the computer decide !
 
 # Technologies used 
 
-> Babel    (7.5.5)     [Link](https://github.com/babel/babel)
+> Babel        (7.5.5)     [Link](https://github.com/babel/babel)
 
-> React    (16.8.6)    [Link](https://github.com/facebook/react)
+> React        (16.8.6)    [Link](https://github.com/facebook/react)
 
-> Webpack  (4.39.1)    [Link](https://github.com/webpack/webpack)
+> Webpack      (4.39.1)    [Link](https://github.com/webpack/webpack)
 
-> React Modal (3.9.1)  [Link](https://github.com/reactjs/react-modal)
+> SCSS  (6.0.0)     [Link](https://github.com/sass/sass)
 
 # How to run
 In the package.json i have 3 scripts. You can just use :
