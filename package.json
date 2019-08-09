@@ -16,7 +16,7 @@
     "start": "run-p dev-server web-build",
     "------------------------": "---------------------"
   },
-  "author": "Kentros Alexandros <Alexandros.KENTROS@intrasoft-intl.com>",
+  "author": "GOXR3PLUS STUDIO",
   "license": "ISC",
   "description": "",
   "dependencies": {
@@ -27,6 +27,7 @@
     "babel-loader": "^8.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-modal": "^3.9.1",
     "validator": "^11.1.0",
     "webpack": "^4.39.1",
     "webpack-dev-server": "^3.7.2"

@@ -3,24 +3,59 @@ import Options from "./Options";
 import Header from "./Header";
 import AddOption from "./AddOption";
 import Action from "./Action";
+import OptionModal from "./OptionModal";
 
 export default class IndecisionApp extends Component {
-  instanceProperty = "Borky Gorky!";
+  state = {
+    title: "Indecision App",
+    subtitle: "Put your life in the hands of a computer!",
+    options: this.props.options,
+    modalOpened: false,
+    selectedOption: undefined
+  };
 
-  constructor(props) {
-    super(props);
+  /* Event Handlers */
 
-    this.state = {
-      title: "Indecision App",
-      subtitle: "Put your life in the hands of a computer!",
-      options: props.options
-    };
+  closeModal = () => {
+    console.log("Close Modal");
+    this.setState(() => ({ modalOpened: false }));
+  };
 
-    this.removeAll = this.removeAll.bind(this);
-    this.addOption = this.addOption.bind(this);
-    this.handlePick = this.handlePick.bind(this);
-    this.removeOption = this.removeOption.bind(this);
-  }
+  removeAll = () => {
+    this.setState(() => ({ options: [] }));
+  };
+
+  addOption = newOption => {
+    if (!newOption) {
+      return "Enter a valid value to add item";
+    } else if (this.state.options.indexOf(newOption) > -1) {
+      return "Item already exists";
+    }
+
+    this.setState(prevState => ({
+      options: [...prevState.options, newOption]
+    }));
+  };
+
+  removeOption = option => {
+    console.log(option);
+
+    this.setState(prevState => ({
+      options: prevState.options.filter(item => item !== option)
+    }));
+  };
+
+  handlePick = () => {
+    const randomNum = Math.floor(Math.random() * this.state.options.length);
+    const option = this.state.options[randomNum];
+
+    this.setState(prevState => ({
+      modalOpened: !prevState.modalOpened,
+      selectedOption: option
+    }));
+  };
+
+  /* LifeCycle Methods */
 
   componentDidMount() {
     console.log("Component Did Mount ", this.instanceProperty);
@@ -50,38 +85,7 @@ export default class IndecisionApp extends Component {
     console.log("Component Will Un-Mount");
   }
 
-  removeAll() {
-    this.setState(() => ({ options: [] }));
-  }
-
-  addOption(newOption) {
-    console.log(ewewr);
-    if (!newOption) {
-      return "Enter a valid value to add item";
-    } else if (this.state.options.indexOf(newOption) > -1) {
-      return "Item already exists";
-    }
-
-    this.setState(prevState => ({
-      options: [...prevState.options, newOption]
-    }));
-  }
-
-  removeOption(option) {
-    console.log(option);
-
-    this.setState(prevState => ({
-      options: prevState.options.filter(item => item !== option)
-    }));
-  }
-
-  handlePick() {
-    const randomNum = Math.floor(Math.random() * this.state.options.length);
-    const option = this.state.options[randomNum];
-
-    console.log(option);
-  }
-
+  /* Render */
   render() {
     return (
       <div>
@@ -96,11 +100,14 @@ export default class IndecisionApp extends Component {
           removeOption={this.removeOption}
         />
         <AddOption addOption={this.addOption} />
+        <OptionModal opened={this.state.modalOpened} close={this.closeModal}>
+          {this.state.selectedOption}{" "}
+        </OptionModal>
       </div>
     );
   }
 }
 
 IndecisionApp.defaultProps = {
-  options: ["Option Alex", "Option Maria", "Option Spiros", "Option Melinaa"]
+  options: ["Drink water", "Swim", "Do Gymnastics", "Make love", "Have fun"]
 };
