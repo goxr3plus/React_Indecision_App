@@ -25,9 +25,9 @@ export default class AddOption extends Component {
         <form onSubmit={this.onFormSubmit}>
           <label>
             <h3>Option: </h3>
-            <input type="text" name="input" />
           </label>
-          <button> Add Option </button>
+          <input type="text" name="input" />
+          <button className="small-button"> Add Option </button>
         </form>
       </div>
     );
