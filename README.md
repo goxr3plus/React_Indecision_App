@@ -17,7 +17,7 @@ What you will do next ? Let the computer decide !
 
 > Webpack  (4.39.1)    [Link](https://github.com/webpack/webpack)
 
-> React Modal (3.9.1)  [Link[(https://github.com/reactjs/react-modal)
+> React Modal (3.9.1)  [Link](https://github.com/reactjs/react-modal)
 
 # How to run
 In the package.json i have 3 scripts. You can just use :
