@@ -17,12 +17,12 @@ What you will do next ? Let the computer decide !
 
 > Webpack  (4.39.1)    [Link](https://github.com/webpack/webpack)
 
-> React Modal (3.9.1)  [Link[(https://github.com/reactjs/react-modal)
+> React Modal (3.9.1)  [Link](https://github.com/reactjs/react-modal)
 
 # How to run
 In the package.json i have 3 scripts. You can just use :
 > npm start
-
-It will start a local server , webpack will build a bundle.js and a new tab will be opened on your default web browser . :)
+It will actually start webpack-dev-server on the port 9000(which you can configure through `wepack.config.js`) :
+> http://127.0.0.1:9000/
 
 
