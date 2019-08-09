@@ -1,12 +1,10 @@
 import React from "react";
 
 const Option = props => (
-  <div>
-    <li style={{ fontWeight: "bold" }}>
+  <div className="option">
+      {props.index}> 
       {props.data}
       <button className="button button--link" onClick={e => props.removeOption(props.data)}>Remove</button>
-    </li>
-    <br />
   </div>
 );
 

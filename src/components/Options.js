@@ -5,7 +5,7 @@ const Options = props => (
   <div>
     {props.options.length ? (
       <div className="widget-header">
-        <p>Options</p>
+        <p className="widget-header__title">Options</p>
         <button className="button" onClick={props.removeAll}>
           Remove All
         </button>
@@ -14,12 +14,17 @@ const Options = props => (
         </button>
       </div>
     ) : null}
-    <ol>
-      {props.options.map((element, index) => (
-        <Option key={index} data={element} removeOption={props.removeOption} />
-      ))}
-    </ol>
-    {!props.options.length && <p> Please add some new options </p>}
+    {props.options.map((element, index) => (
+      <Option
+        key={index}
+        index={index}
+        data={element}
+        removeOption={props.removeOption}
+      />
+    ))}
+    {!props.options.length && (
+      <p className="widget__message"> Please add option to get started! </p>
+    )}
   </div>
 );
 
