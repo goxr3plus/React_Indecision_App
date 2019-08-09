@@ -6,7 +6,7 @@ import "./styles/style.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <IndecisionApp /> {/* options={["Devils den", "Second Disctrict"] */}
+    <IndecisionApp />
   </React.StrictMode>,
   document.getElementById("app")
 );

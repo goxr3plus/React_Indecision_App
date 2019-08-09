@@ -10,6 +10,7 @@ const Options = props => (
       ))}
     </ol>
     <button onClick={props.removeAll}> Remove All</button>
+    <button onClick={props.clearLocalStorage}>Reset Defaults</button>
   </div>
 );
 
