@@ -1,0 +1,12 @@
+.widget{
+  background:$light-blue;
+  margin-bottom: $xl-size;
+}
+
+.widget-header {
+  background: $blue;
+  color: $off-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $m-size;
+}

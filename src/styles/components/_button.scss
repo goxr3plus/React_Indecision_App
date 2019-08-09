@@ -25,7 +25,7 @@
   border-bottom: 0.3rem solid darken($purple, 10%);
   color: white;
   font-weight: bold;
-  font-size: $m-size;
+  font-size: $s-size;
   padding: $s-size;
   widows: 100%;
 }
@@ -34,6 +34,7 @@
   background: darken($purple, 5%);
   border-bottom: 0.3rem solid darken($purple, 15%);
 }
+
 
 
 .button--link {
