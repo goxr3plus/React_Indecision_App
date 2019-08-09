@@ -3,9 +3,11 @@ What you will do next ? Let the computer decide !
 
 # Technologies used 
 
-> Latest Babel 7 version (7.5.5)
+> Babel    (7.5.5)  [Link](https://github.com/babel/babel)
 
-> Latest React Version   (16.8.6)
+> React    (16.8.6) [Link](https://github.com/facebook/react)
+
+> Webpack  (4.39.1) [Link](https://github.com/webpack/webpack)
 
 # How to run
 In the package.json i have 3 scripts. You can just use :
