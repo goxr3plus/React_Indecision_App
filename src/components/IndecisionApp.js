@@ -4,6 +4,7 @@ import Header from "./Header";
 import AddOption from "./AddOption";
 import Action from "./Action";
 import OptionModal from "./OptionModal";
+import Option from "./Option";
 
 export default class IndecisionApp extends Component {
   state = {
@@ -16,8 +17,12 @@ export default class IndecisionApp extends Component {
 
   /* Event Handlers */
 
+  clearLocalStorage = () => {
+    localStorage.removeItem("options");
+    this.setState(() => ({ options: this.props.options }));
+  };
+
   closeModal = () => {
-    console.log("Close Modal");
     this.setState(() => ({ modalOpened: false }));
   };
 
@@ -90,6 +95,8 @@ export default class IndecisionApp extends Component {
     return (
       <div>
         <Header />
+        <button onClick={this.clearLocalStorage}>Clear LocalStorage</button>
+        <hr />
         <Action
           hasOptions={this.state.options.length !== 0}
           handlePick={this.handlePick}
@@ -101,7 +108,7 @@ export default class IndecisionApp extends Component {
         />
         <AddOption addOption={this.addOption} />
         <OptionModal opened={this.state.modalOpened} close={this.closeModal}>
-          {this.state.selectedOption}{" "}
+          {this.state.selectedOption}
         </OptionModal>
       </div>
     );
