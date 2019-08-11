@@ -6,12 +6,14 @@ const Options = props => (
     {props.options.length ? (
       <div className="widget-header">
         <p className="widget-header__title">Options</p>
-        <button className="button" onClick={props.removeAll}>
-          Remove All
-        </button>
-        <button className="button" onClick={props.clearLocalStorage}>
-          Reset Defaults
-        </button>
+        <div className="widget-header_right">
+          <button className="button" onClick={props.removeAll}>
+            Remove All
+          </button>
+          <button className="button" onClick={props.clearLocalStorage}>
+            Reset Defaults
+          </button>
+        </div>
       </div>
     ) : null}
     {props.options.map((element, index) => (

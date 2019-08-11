@@ -17,3 +17,9 @@
   font-weight: 500;
   margin: 1rem 0 0 0;
 }
+
+@media (max-width: $desktop-breakpoint) {
+  .header {
+    margin-bottom: $m-size + 0.5;
+  }
+}

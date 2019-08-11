@@ -1,6 +1,21 @@
 .widget {
   background: $light-blue;
   margin-bottom: $xl-size;
+  text-align: center;
+}
+
+.widget-header {
+  background: $blue;
+  color: $off-white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.widget-header_right {
+  display: flex;
+  justify-content: space-between;
 }
 
 .widget__message {
@@ -11,19 +26,7 @@
   border-bottom: 1px solid border lighten($color: $light-blue, $amount: 10%);
 }
 
-.widget-header {
-  background: $blue;
-  color: $off-white;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  height: 4rem;
-}
-
 .widget-header__title {
   margin-top: 1.15rem;
   padding: 0 $l-size;
 }
-
-
