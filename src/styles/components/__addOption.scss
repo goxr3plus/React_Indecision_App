@@ -20,7 +20,7 @@
   padding: $s-size;
 }
 
-@media (min-width: 45rem) {
+@media (min-width: $desktop-breakpoint) {
   .add-option {
     flex-direction: row;
     margin: 0.5rem 0.35rem;

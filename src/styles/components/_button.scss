@@ -5,7 +5,7 @@
   color: white;
   font-weight: bold;
   font-size: $l-size;
-  margin-bottom: $xl-size;
+  margin-bottom: $s-size;
   padding: 2.2rem;
   widows: 100%;
   transition: 0.3s all ease-in-out;
@@ -26,14 +26,6 @@
     opacity: 0.5;
   }
 }
-
-// @media (max-width: $desktop-breakpoint) {
-//   .big-button {
-//     font-size: $l-size - 1;
-//     padding: $l-size - 1;
-//     margin-bottom: $m-size + 1.5;
-//   }
-// }
 
 .button {
   background: $purple;
@@ -62,5 +54,11 @@
   &:hover {
     background: none;
     border-bottom: none;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .big-button {
+    margin-bottom: $m-size;
   }
 }

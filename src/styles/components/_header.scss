@@ -1,6 +1,6 @@
 .header {
   background: $off-black;
-  margin-bottom: 4.8rem;
+  margin-bottom: $s-size;
   padding: $m-size 0;
   color: white;
 }
@@ -18,8 +18,8 @@
   margin: 1rem 0 0 0;
 }
 
-@media (max-width: $desktop-breakpoint) {
+@media (min-width: $desktop-breakpoint) {
   .header {
-    margin-bottom: $m-size + 0.5;
+    margin-bottom: $m-size;
   }
 }
