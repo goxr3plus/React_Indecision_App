@@ -1,12 +1,13 @@
 .add-option-error {
   color: $off-white;
   font-style: italic;
-  margin: $m-size 0 0.5rem  0;
+  margin: $m-size 0 0.5rem 0;
   padding: 0 $m-size;
 }
 
 .add-option {
   display: flex;
+  flex-direction: column;
 }
 
 .add-option__input {
@@ -14,7 +15,18 @@
   border: none;
   border-bottom: 0.3rem solid darken($dark-blue, 10%);
   flex-grow: 1;
-  margin: 0.5rem 0.35rem;
+  margin: 0 0 0.7rem 0;
   color: $off-white;
-  padding:$s-size;
+  padding: $s-size;
+}
+
+@media (min-width: 45rem) {
+  .add-option {
+    flex-direction: row;
+    margin: 0.5rem 0.35rem;
+  }
+
+  .add-option__input {
+    margin: 0.5rem 0.35rem;
+  }
 }
