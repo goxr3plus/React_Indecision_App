@@ -1,12 +1,14 @@
-# React Indecision App ( Under Development)
+# React Indecision App
 What you will do next ? Let the computer decide !
 
 # How it will look like 
 
+![2019-08-11_19-40-17](https://user-images.githubusercontent.com/20374208/62836821-efad1400-bc6f-11e9-87fb-ae61ed43cb0c.gif)
+
+
 | Todo | Ride your mom 
 |:-:|:-:|
 | ![First](https://user-images.githubusercontent.com/20374208/62763578-9210a000-ba94-11e9-9371-0e2924782004.png) | ![Sec](https://user-images.githubusercontent.com/20374208/62763595-a2c11600-ba94-11e9-9f52-6af529615efc.png) |
-
 
 
 # Technologies used 
