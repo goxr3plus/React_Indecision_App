@@ -79,8 +79,8 @@ export default class IndecisionApp extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("Component Did Update P.1 ", prevProps, prevState);
-    console.log("Component Did Update P.2", this.props, this.state);
+    // console.log("Component Did Update P.1 ", prevProps, prevState);
+    // console.log("Component Did Update P.2", this.props, this.state);`
 
     //we have acess to [this.props + this.state]
     if (prevState.options.length != this.state.options.length) {
