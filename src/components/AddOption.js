@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 export default class AddOption extends Component {
-  state = {
-    error: undefined
-  };
-
   onFormSubmit = e => {
     e.preventDefault();
 
@@ -13,17 +9,19 @@ export default class AddOption extends Component {
 
     //empty string is falsy value
     const error = this.props.addOption(inputValue);
-    this.setState(() => ({ error }));
+    this.props.setError(error);
 
-    if (!error) e.target.elements.input.value = "";
+    if (!this.props.error) e.target.elements.input.value = "";
   };
 
   render() {
     return (
       <div>
-        {this.state.error && <p>{this.state.error}</p>}
-        <form onSubmit={this.onFormSubmit}>
-          <input type="text" name="input" />
+        {this.props.error && (
+          <p className="add-option-error">{this.props.error}</p>
+        )}
+        <form className="add-option" onSubmit={this.onFormSubmit}>
+          <input className="add-option__input" type="text" name="input" placeholder="Add Option here..." />
           <button className="button"> Add Option </button>
         </form>
       </div>

@@ -12,13 +12,14 @@ export default class IndecisionApp extends Component {
     subtitle: "Put your life in the hands of a computer!",
     options: this.props.options,
     modalOpened: false,
-    selectedOption: undefined
+    selectedOption: undefined,
+    error: undefined
   };
 
   /* Event Handlers */
   clearLocalStorage = () => {
     localStorage.removeItem("options");
-    this.setState(() => ({ options: this.props.options }));
+    this.setState(() => ({ options: this.props.options, error: undefined }));
   };
 
   closeModal = () => {
@@ -26,7 +27,11 @@ export default class IndecisionApp extends Component {
   };
 
   removeAll = () => {
-    this.setState(() => ({ options: [] }));
+    this.setState(() => ({ options: [], error: undefined }));
+  };
+
+  setError = error => {
+    this.setState(() => ({ error: error }));
   };
 
   addOption = newOption => {
@@ -106,7 +111,11 @@ export default class IndecisionApp extends Component {
               clearLocalStorage={this.clearLocalStorage}
               removeOption={this.removeOption}
             />
-            <AddOption addOption={this.addOption} />
+            <AddOption
+              addOption={this.addOption}
+              error={this.state.error}
+              setError={this.setError}
+            />
           </div>
           <OptionModal opened={this.state.modalOpened} close={this.closeModal}>
             {this.state.selectedOption}
