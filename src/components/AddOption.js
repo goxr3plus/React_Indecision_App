@@ -21,7 +21,12 @@ export default class AddOption extends Component {
           <p className="add-option-error">{this.props.error}</p>
         )}
         <form className="add-option" onSubmit={this.onFormSubmit}>
-          <input className="add-option__input" type="text" name="input" placeholder="Add Option here..." />
+          <input
+            className="add-option__input"
+            type="text"
+            name="input"
+            placeholder="Add Option here..."
+          />
           <button className="button"> Add Option </button>
         </form>
       </div>

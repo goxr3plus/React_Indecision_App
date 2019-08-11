@@ -8,15 +8,23 @@
   margin-bottom: $xl-size;
   padding: 2.2rem;
   widows: 100%;
-}
+  transition: 0.3s all ease-in-out;
 
-.big-button:hover{
-  background: darken($purple, 5%);
-  border-bottom: 0.6rem solid darken($purple, 15%);
-}
+  &:hover {
+    transform: translateY(-0.6rem);
+    background: darken($purple, 5%);
+    border-bottom: 0.6rem solid darken($purple, 15%);
+    box-shadow: 7px 13px 16px rgba(0, 0, 0, 0.35);
+  }
 
-.big-button:disabled {
-  opacity: 0.5;
+  &:active {
+    transform: translateY(0.6rem);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .button {
@@ -28,25 +36,23 @@
   font-size: $s-size;
   padding: $s-size;
   widows: 100%;
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    transform: translateY(-0.6rem);
+    background: darken($purple, 5%);
+    border-bottom: 0.3rem solid darken($purple, 15%);
+  }
 }
-
-.button:hover{
-  background: darken($purple, 5%);
-  border-bottom: 0.3rem solid darken($purple, 15%);
-}
-
-
 
 .button--link {
   background: none;
   border: none;
   color: $off-white;
   padding: 0;
+
+  &:hover {
+    background: none;
+    border-bottom: none;
+  }
 }
-
-.button--link:hover {
-  background: none;
-  border-bottom: none;
-}
-
-
