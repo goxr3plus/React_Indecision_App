@@ -1,7 +1,5 @@
-# React Indecision App
+# React Indecision App [Try it out!](https://goxr3plus.github.io/React_Indecision_App/)
 What you will do next ? Let the computer decide !
-
-[Try it out!](https://goxr3plus.github.io/React_Indecision_App/)
 
 # How it will look like 
 
