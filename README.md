@@ -12,7 +12,7 @@ What you will do next ? Let the computer decide !
 
  
 # Technologies used 
-
+ 
 > Babel        (7.5.5)     [Link](https://github.com/babel/babel)
 
 > React        (16.9.0)    [Link](https://github.com/facebook/react)
