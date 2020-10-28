@@ -7,7 +7,7 @@ What you will do next ? Let the computer decide !
  
 
 | Todo | Ride your mom  
-|:-:|:-:|
+|:-:|:-:| 
 | ![First](https://user-images.githubusercontent.com/20374208/62763578-9210a000-ba94-11e9-9371-0e2924782004.png) | ![Sec](https://user-images.githubusercontent.com/20374208/62763595-a2c11600-ba94-11e9-9f52-6af529615efc.png) |
 
   
